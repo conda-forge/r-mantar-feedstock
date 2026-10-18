@@ -1,4 +1,4 @@
-{% set version = '0.3.1' %}
+{% set version = "0.3.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/mantar_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/mantar/mantar_{{ version }}.tar.gz
-  sha256: 4610d367325d7839954f2be22016ef91ee7ce927e37bb84ad3a07595fcf7e57b
+  sha256: 1237c20756e60ba4785fca708ad05b1b0d0f2b5521fceb6624a0248cb5886172
 
 build:
   number: 0
@@ -47,13 +47,8 @@ test:
 about:
   home: https://github.com/kai-nehler/mantar
   license: GPL-3.0-or-later
-  summary: Provides functionality for estimating cross-sectional network structures representing
-    partial correlations while accounting for missing data. Networks are estimated via
-    neighborhood selection or regularization, with model selection guided by information
-    criteria. Missing data can be handled primarily via multiple imputation or a maximum
-    likelihood-based approach, as demonstrated by Nehler and Schultze (2025) <doi:10.1080/00273171.2025.2503833>
-    and Nehler and Schultze (2026) <doi:10.1037/met0000828>. Deletion-based approaches
-    are also available but play a secondary role.
+  summary: Provides functionality for estimating cross-sectional network structures representing partial correlations while accounting for missing data. Networks are estimated via neighborhood selection or regularization, with model selection guided by information criteria. Missing data can be handled primarily via 
+    multiple imputation or a maximum likelihood-based approach, as demonstrated by Nehler and Schultze (2025) <doi:10.1080/00273171.2025.2503833> and Nehler and Schultze (2026) <doi:10.1037/met0000828>. Deletion-based approaches are also available but play a secondary role.
   license_family: GPL3
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
